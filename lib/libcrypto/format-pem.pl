@@ -25,7 +25,7 @@ if (! eval {require Date::Parse;1;}) {
 	use Date::Parse;
 }
 
-my $tmp = File::Temp->new(TEMPLATE => '/tmp/splitcert.XXXXXXXX');
+my $tmp = File::Temp->new(TEMPLATE => '/tmp/splitcert.XXXXXXXX', CLEANUP => 1);
 my $t = $tmp->filename;
 
 my $certs = 0;
